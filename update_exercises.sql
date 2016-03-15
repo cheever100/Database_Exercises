@@ -23,9 +23,9 @@ SELECT record_name AS 'Album', sales_in_millions AS 'Sales $MM' FROM albums;
 
 -- Move all the albums before 1980 back to the 1800s.
 UPDATE albums
-SET release_date = '1800-01-01'
-WHERE release_date < '1980-01-01';
-SELECT record_name AS 'Album', release_date AS 'Release Date' FROM albums WHERE release_date = '1800-01-01';
+SET release_date = DATE_SUB(release_date, INTERVAL 100 YEAR)
+WHERE release_date < TIMESTAMP ('1980-01-01');
+SELECT record_name AS 'Album', release_date AS '1800s Release Date' FROM albums WHERE release_date = release_date;
 
 -- Change "Michael Jackson" to "Peter Jackson"
 UPDATE albums

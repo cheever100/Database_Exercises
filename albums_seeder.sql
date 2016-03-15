@@ -1,4 +1,7 @@
 USE codeup_test_db;
+-- add a TRUNCATE query to delete all records from the table before inserting.
+
+TRUNCATE albums;
 
 INSERT INTO albums (artist_name, record_name, release_date, sales_in_millions, genre)
 
