@@ -1,13 +1,17 @@
 USE codeup_test_db;
 
 -- Employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows (Hint: Use IN).
-SELECT first_name, last_name
-FROM employees
+
 -- WHERE first_name IN ('Irena', 'Vidya', 'Maya');
 -- Update your query for 'Irena', 'Vidya', or 'Maya' to use OR instead of IN — 709 rows.
-WHERE first_name = 'Irena'
+SELECT first_name, last_name, gender
+FROM employees
+WHERE gender = 'M'
+AND (first_name = 'Irena'
 OR first_name = 'Vidya'
-OR first_name = 'Maya';
+OR first_name = 'Maya');
+-- Now add a condition to find everybody with those names who is also male — 441 rows.
+
 
 -- -- Employees whose last name starts with 'E' — 7,330 rows.
 -- SELECT first_name, last_name
