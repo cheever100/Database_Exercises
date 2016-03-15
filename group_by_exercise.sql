@@ -27,3 +27,12 @@ FROM employees
 WHERE last_name LIKE 'E%'
 AND last_name LIKE '%E'
 GROUP BY last_name;
+
+-- Step #5: Update your previous query to now find unique combinations 
+-- of first and last name where the last name starts and ends with 'E'. 
+-- You should get 846 rows.
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%'
+AND last_name LIKE '%E'
+GROUP BY first_name, last_name;
