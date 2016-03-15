@@ -12,10 +12,11 @@ USE codeup_test_db;
 -- OR first_name = 'Maya');
 -- Now add a condition to find everybody with those names who is also male — 441 rows.
 -- Find all employees whose last name starts or ends with 'E' — 30,723 rows.
+-- update it to find all employees whose last name starts and ends with 'E' — 899 rows.
 SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE 'E%'
-OR last_name LIKE '%E';
+AND last_name LIKE '%E';
 
 
 -- -- Employees whose last name starts with 'E' — 7,330 rows.
