@@ -1,6 +1,6 @@
 USE codeup_test_db;
 
--- use DISTINCT to find the unique titles in the titles table.
+-- Step # 2: Use DISTINCT to find the unique titles in the titles table.
 --  Senior Engineer
 --  Staff
 --  Engineer
@@ -8,5 +8,8 @@ USE codeup_test_db;
 --  Assistant Engineer
 --  Technique Leader
 --  Manager
+
+-- Step # 3: Update the previous query to sort the results alphabetically.
 SELECT DISTINCT title
-FROM titles;
+FROM titles
+ORDER BY title ASC;
