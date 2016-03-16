@@ -46,7 +46,12 @@ WHERE last_name LIKE '%q%'
   AND last_name NOT LIKE '%qu%'
 GROUP BY last_name;
 
-
+-- extra:
+SELECT last_name, gender, count(last_name)
+FROM employees
+WHERE last_name LIKE '%q%'
+  AND last_name NOT LIKE '%qu%'
+GROUP BY gender;
 
 
 
