@@ -54,7 +54,14 @@ AND last_name LIKE '%E%'
 ORDER BY emp_no ASC; 
 
 -- Step #7:
- 
+-- Change the query for employees hired in the 90s and born on Christmas 
+-- first result is the oldest employee who was hired last. 
+-- Khun Bernini
+SELECT first_name, last_name, birth_date, hire_date
+FROM employees
+WHERE hire_date LIKE '%199%'
+AND birth_date LIKE '%12-25%'
+ORDER BY birth_date ASC, hire_date DESC; 
 
 
 
