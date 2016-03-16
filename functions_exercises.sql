@@ -14,3 +14,15 @@ OR first_name = 'Vidya'
 OR first_name = 'Maya')
 GROUP BY gender;
 
+-- Step #3:
+-- Update your queries for employees whose names start and end with 'E'.
+-- Use concat() to combine their first and last name together as a single
+-- column in your results.
+SELECT CONCAT(first_name, ' ', last_name)
+FROM employees
+WHERE (first_name = 'Irena'
+OR first_name = 'Vidya'
+OR first_name = 'Maya')
+AND gender = 'M'
+AND last_name LIKE '%E%'
+GROUP BY CONCAT(first_name, last_name); 
