@@ -25,3 +25,19 @@ OR first_name = 'Vidya'
 OR first_name = 'Maya')
 AND gender = 'M'
 ORDER BY first_name, last_name ASC; 
+
+-- Step #4:
+-- Change the order by clause so that you order by last name before first name. 
+-- first result should still be Irena Acton
+-- last result should be Maya Zyda.
+SELECT first_name, last_name, gender
+FROM employees
+WHERE (first_name = 'Irena'
+OR first_name = 'Vidya'
+OR first_name = 'Maya')
+AND gender = 'M'
+ORDER BY last_name, first_name ASC; 
+
+
+
+
